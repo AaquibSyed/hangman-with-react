@@ -1,0 +1,1 @@
+export const CATEGORY_CLICKED = "CATEGORY_CLICKED";

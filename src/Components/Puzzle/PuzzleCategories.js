@@ -2,12 +2,20 @@ import React from "react";
 import { connect } from "react-redux";
 import uuid from "react-uuid";
 import "./PuzzleCategories.css";
+import { categoryClicked } from "./../../Redux/actions";
 
-function PuzzleCategories({ categories }) {
+function PuzzleCategories({ categories, categoryClicked }) {
   return (
     <div className="puzzle__categories">
       {categories.map((category) => (
-        <button className="button button_category" key={uuid()}>
+        <button
+          className="button button_category"
+          onClick={(e) => {
+            categoryClicked(e);
+          }}
+          key={uuid()}
+          name={category}
+        >
           {category}
         </button>
       ))}
@@ -18,7 +26,14 @@ function PuzzleCategories({ categories }) {
 const mapStateToProps = (state) => {
   return {
     categories: state.categories,
+    categorySelected: state.categorySelected,
   };
 };
 
-export default connect(mapStateToProps)(PuzzleCategories);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    categoryClicked: (e) => dispatch(categoryClicked(e)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PuzzleCategories);
