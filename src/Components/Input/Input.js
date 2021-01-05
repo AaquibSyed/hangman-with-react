@@ -19,7 +19,6 @@ function Input({ guessSubmitted }) {
           id="input__textBox"
           maxLength="1"
           type="text"
-          placeholder="GUESS"
         />
       </form>
     </div>
