@@ -1,9 +1,10 @@
 import React from "react";
 import "./Puzzle.css";
+import PuzzleCategories from "./PuzzleCategories";
 function Puzzle() {
   return (
     <div className="puzzle">
-      <div className="puzzle__categories">Categories here</div>
+      <PuzzleCategories />
       <div className="puzzle__box">puzzle box here</div>
     </div>
   );
