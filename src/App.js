@@ -2,8 +2,11 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>HANGMAN GAME USING REACT and REDUX</h1>
+    <div className="app">
+      <div className="header-container">Header</div>
+      <div className="puzzle-container">puzzzzle</div>
+      <div className="info-container">info</div>
+      <div className="input-container">input</div>
     </div>
   );
 }
