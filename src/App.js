@@ -1,5 +1,7 @@
 import "./App.css";
 import Header from "./Components/Header";
+import Info from "./Components/Info";
+import Input from "./Components/Input";
 import Puzzle from "./Components/Puzzle";
 
 function App() {
@@ -7,8 +9,8 @@ function App() {
     <div className="app">
       <Header />
       <Puzzle />
-      <div className="info-container">info</div>
-      <div className="input-container">input</div>
+      <Info />
+      <Input />
     </div>
   );
 }

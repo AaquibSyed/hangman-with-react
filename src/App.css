@@ -13,12 +13,3 @@
     "info"
     "input";
 }
-
-.info-container {
-  grid-area: info;
-  background-color: gold;
-}
-.input-container {
-  grid-area: input;
-  background-color: lemonchiffon;
-}
