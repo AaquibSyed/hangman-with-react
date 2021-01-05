@@ -12,8 +12,8 @@ function App() {
       <div className="app">
         <Header />
         <Puzzle />
-        <Info />
         <Input />
+        <Info />
       </div>
     </Provider>
   );

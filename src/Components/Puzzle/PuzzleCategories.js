@@ -12,6 +12,7 @@ function PuzzleCategories({ categories, categoryClicked }) {
           className="button button_category"
           onClick={(e) => {
             categoryClicked(e);
+            document.getElementById("input__textBox").focus();
           }}
           key={uuid()}
           name={category}
