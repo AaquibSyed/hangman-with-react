@@ -1,0 +1,34 @@
+.character_container {
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.character_container:hover {
+  transform: rotateY(180deg);
+}
+
+.character_container > div {
+  border-radius: 40%;
+}
+
+.character_front {
+  position: absolute;
+  background-color: gold;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.character_back {
+  background-color: green;
+  font-size: 2rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  text-align: center;
+}

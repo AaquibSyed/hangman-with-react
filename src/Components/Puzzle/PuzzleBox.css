@@ -1,0 +1,9 @@
+.puzzle__box {
+  position: relative;
+  width: 100%;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: puzzleBox;
+}

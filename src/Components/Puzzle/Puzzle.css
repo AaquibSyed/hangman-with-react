@@ -1,4 +1,11 @@
 .puzzle {
+  width: 100%;
   grid-area: puzzle;
   background-color: yellowgreen;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas:
+    "categories"
+    "puzzleBox";
 }
