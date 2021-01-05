@@ -1,8 +1,35 @@
 import React from "react";
+import { connect } from "react-redux";
+import { charEntered } from "../../Redux/actions";
 import "./Input.css";
 
-function Input() {
-  return <div className="input">input form here</div>;
-}
+function Input({ guessSubmitted }) {
+  const characterSubmitted = (e) => {
+    e.preventDefault();
+    const enteredChar = document.getElementById("input__textBox").value;
+    guessSubmitted(enteredChar);
+    document.getElementById("input__textBox").value = "";
+  };
 
-export default Input;
+  return (
+    <div className="input">
+      <form className="input__form" onSubmit={characterSubmitted}>
+        <input
+          className="input__textBox"
+          id="input__textBox"
+          maxLength="1"
+          type="text"
+          placeholder="GUESS"
+        />
+      </form>
+    </div>
+  );
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    guessSubmitted: (enteredChar) => {
+      dispatch(charEntered(enteredChar));
+    },
+  };
+};
+export default connect(null, mapDispatchToProps)(Input);

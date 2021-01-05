@@ -6,12 +6,12 @@
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5fr 15fr 15fr 5fr;
+  grid-template-rows: 5fr 16fr 2fr 16fr;
   grid-template-areas:
     "header"
     "puzzle"
-    "info"
-    "input";
+    "input"
+    "info";
 }
 
 .button {

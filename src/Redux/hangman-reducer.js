@@ -1,4 +1,4 @@
-import { CATEGORY_CLICKED } from "./types";
+import { CATEGORY_CLICKED, CHAR_ENTERED } from "./types";
 import { list } from "./../Assets/data";
 
 const initialState = {
@@ -13,6 +13,7 @@ const initialState = {
   categorySelected: "",
   isCategorySelectionActive: true,
   puzzle: [],
+  enteredCharacters: [],
 };
 
 export const hangmanReducer = (state = initialState, action) => {
@@ -27,6 +28,15 @@ export const hangmanReducer = (state = initialState, action) => {
         categorySelected: action.payload.categoryName,
         isCategorySelectionActive: action.payload.isCategorySelectionActive,
         puzzle: randomPuzzle,
+      };
+
+    case CHAR_ENTERED:
+      return {
+        ...state,
+        enteredCharacters: [
+          ...state.enteredCharacters,
+          action.payload.enteredCharacter,
+        ],
       };
 
     default:

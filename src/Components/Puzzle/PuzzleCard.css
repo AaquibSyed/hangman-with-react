@@ -32,3 +32,13 @@
   transform: rotateY(180deg);
   text-align: center;
 }
+
+@media only screen and (max-width: 450px) {
+  .character_container {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .character_back {
+    font-size: 1rem;
+  }
+}
