@@ -14,10 +14,6 @@
     "input";
 }
 
-.puzzle-container {
-  grid-area: puzzle;
-  background-color: yellowgreen;
-}
 .info-container {
   grid-area: info;
   background-color: gold;
