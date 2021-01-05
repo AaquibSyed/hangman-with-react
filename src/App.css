@@ -8,15 +8,12 @@
   grid-template-columns: 1fr;
   grid-template-rows: 5fr 15fr 15fr 5fr;
   grid-template-areas:
-    "header "
-    "puzzle "
+    "header"
+    "puzzle"
     "info"
     "input";
 }
 
-.header-container {
-  grid-area: header;
-}
 .puzzle-container {
   grid-area: puzzle;
   background-color: yellowgreen;
