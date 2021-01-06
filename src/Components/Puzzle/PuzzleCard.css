@@ -1,5 +1,5 @@
 .character_container {
-  transition: all 10s ease-in-out;
+  transition: all 0.1s ease-in-out;
   height: 3rem;
   width: 3rem;
   position: relative;
@@ -19,7 +19,7 @@
 }
 
 .character_back {
-  transition: all 10s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: green;
   font-size: 2rem;
   position: absolute;
@@ -31,7 +31,7 @@
 }
 
 .character_right {
-  transition: all 10s ease-in-out;
+  transition: all 0.2s ease-in-out;
   transform: rotateY(360deg);
   background-color: green;
 }

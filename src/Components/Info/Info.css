@@ -48,3 +48,44 @@
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 1fr;
 }
+
+.info__gameOver {
+  margin: 0.4rem;
+  background-color: rgba(255, 255, 0, 0.8);
+  margin: 0.4rem;
+  border-radius: 4%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  grid-template-areas:
+    "image"
+    "restartButton";
+  transition: all 5s ease-in-out;
+}
+
+.info__image {
+  justify-self: center;
+  align-self: center;
+  object-fit: contain;
+  grid-area: image;
+  display: flex;
+  width: 0.2vw;
+  height: 0.2vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.gameOver {
+  transform: scale(100);
+}
+
+.button-restart {
+  grid-area: restartButton;
+  justify-self: center;
+  align-self: center;
+  background-color: gold !important;
+}
+@media only screen and (max-width: 450px) {
+  .button-restart {
+    transform: scale(0.5);
+  }
+}
