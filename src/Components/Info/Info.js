@@ -9,7 +9,7 @@ function Info({ wrongGuesses, enteredCharacters }) {
   return (
     <div className="info">
       <InfoRemainingTries tries={5 - wrongGuesses} />
-      <InfoGameOver />
+      <InfoGameOver wrongGuesses={wrongGuesses} />
       <InfoGuessedCharacters enteredChars={enteredCharacters} />
     </div>
   );

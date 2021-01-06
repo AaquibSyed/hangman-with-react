@@ -18,6 +18,7 @@
   padding: 0.3rem;
   border-radius: 9%;
   margin: 0.1rem;
+  font-weight: bolder;
 }
 
 .button:hover {
