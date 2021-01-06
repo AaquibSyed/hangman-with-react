@@ -8,9 +8,9 @@ function InfoGuessedCharacters({ enteredChars }) {
         <h5>Guessed Characters</h5>
       </div>
       <div className="info__detail">
-        {enteredChars.map((e) => (
-          <div key={uuid()}>
-            <b>{e}</b>
+        {enteredChars.map((c) => (
+          <div className="info__enteredItems" key={uuid()}>
+            <h3>{c.toUpperCase()}</h3>
           </div>
         ))}
       </div>
