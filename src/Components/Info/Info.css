@@ -98,7 +98,7 @@
 
 @media only screen and (max-width: 450px) {
   .button-restart {
-    transform: scale(0.5);
+    transform: scale(0.8);
   }
   .modal_Container {
     font-size: 1rem;
