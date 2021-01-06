@@ -31,6 +31,8 @@ export const hangmanReducer = (state = initialState, action) => {
         isCategorySelectionActive: action.payload.isCategorySelectionActive,
         puzzle: randomPuzzle,
         remainingCharacters: randomPuzzle.filter((e) => e !== " "),
+        enteredCharacters: [],
+        wrongGuesses: 0,
       };
 
     case CHAR_ENTERED:
@@ -46,10 +48,7 @@ export const hangmanReducer = (state = initialState, action) => {
 
       return {
         ...state,
-        enteredCharacters: [
-          ...state.enteredCharacters,
-          action.payload.enteredCharacter,
-        ],
+        enteredCharacters: [...state.enteredCharacters, enteredCharacter],
         wrongGuesses: wrongGuessCount,
         remainingCharacters: _remainingChars,
       };

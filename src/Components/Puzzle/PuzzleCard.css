@@ -1,13 +1,9 @@
 .character_container {
+  transition: all 10s ease-in-out;
   height: 3rem;
   width: 3rem;
   position: relative;
   transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
-}
-
-.character_container:hover {
-  transform: rotateY(180deg);
 }
 
 .character_container > div {
@@ -23,6 +19,7 @@
 }
 
 .character_back {
+  transition: all 10s ease-in-out;
   background-color: green;
   font-size: 2rem;
   position: absolute;
@@ -31,6 +28,12 @@
   backface-visibility: hidden;
   transform: rotateY(180deg);
   text-align: center;
+}
+
+.character_right {
+  transition: all 10s ease-in-out;
+  transform: rotateY(360deg);
+  background-color: green;
 }
 
 @media only screen and (max-width: 450px) {
