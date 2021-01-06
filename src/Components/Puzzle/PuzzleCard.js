@@ -12,7 +12,8 @@ function PuzzleCard({ value, enteredCharacters }) {
         className={
           value === " "
             ? "character_space"
-            : enteredCharacters.includes(value.toLowerCase())
+            : enteredCharacters.includes(value.toLowerCase()) ||
+              enteredCharacters.includes(value.toUpperCase())
             ? "character_back character_right"
             : "character_back"
         }
