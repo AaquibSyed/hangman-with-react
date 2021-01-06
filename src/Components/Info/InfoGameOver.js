@@ -1,11 +1,8 @@
 import React from "react";
+import { restartGame } from "../../Assets/data";
 import "./Info.css";
 
 function InfoGameOver({ wrongGuesses }) {
-  const restartGame = () => {
-    window.location.reload();
-  };
-
   return (
     <div className="info__gameOver">
       <img

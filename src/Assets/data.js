@@ -6,3 +6,7 @@ export const list = {
   Celebrities: ["Aamir Khan"],
   Cartoons: ["Pingu"],
 };
+
+export const restartGame = () => {
+  window.location.reload();
+};
