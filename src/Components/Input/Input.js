@@ -13,7 +13,11 @@ function Input({ guessSubmitted, isCategorySelectionActive }) {
 
   return (
     <div className="input">
-      <form className="input__form" onSubmit={characterSubmitted}>
+      <form
+        className="input__form"
+        onSubmit={characterSubmitted}
+        autocomplete="off"
+      >
         <input
           className="input__textBox"
           id="input__textBox"
