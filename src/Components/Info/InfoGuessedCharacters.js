@@ -7,7 +7,7 @@ function InfoGuessedCharacters({ enteredChars }) {
       <div className="info__label">
         <h5>Guessed Characters</h5>
       </div>
-      <div className="info__detail">
+      <div className="info__detailGuessed">
         {enteredChars.map((c) => (
           <div className="info__enteredItems" key={uuid()}>
             <h3>{c.toUpperCase()}</h3>

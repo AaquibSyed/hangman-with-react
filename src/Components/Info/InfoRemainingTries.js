@@ -6,7 +6,7 @@ function InfoRemainingTries({ tries }) {
       <div className="info__label">
         <h5>Remaining Tries</h5>
       </div>
-      <div className="info__detail">
+      <div className="info__detailRemaining">
         <h1>{tries}</h1>
       </div>
     </div>
