@@ -2,19 +2,26 @@ import React from "react";
 import { restartGame } from "../../Assets/data";
 import "./Info.css";
 
-function InfoGameOver({ wrongGuesses }) {
+function InfoGameOver({ wrongGuesses, answer }) {
   return (
     <div className="info__gameOver">
-      <img
-        className={wrongGuesses === 5 ? "info__image gameOver" : "info__image"}
-        src="/images/Hangman.jpg"
-        alt="Game Over"
-      />
-      {wrongGuesses === 5 && (
+      <div className="info__answer">
+        <p>
+          The answer is <i className="answer__text">{answer.toUpperCase()}</i>
+        </p>
+      </div>
+      <div className="image__container">
+        <img
+          className="info__image"
+          src="/images/Hangman.jpg"
+          alt="Game Over"
+        />
+      </div>
+      <div className="restart__container">
         <button className=" button button-restart" onClick={restartGame}>
-          GAME OVER!! Restart Game
+          GAME OVER😞 Restart Game
         </button>
-      )}
+      </div>
     </div>
   );
 }

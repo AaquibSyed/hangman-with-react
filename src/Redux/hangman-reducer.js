@@ -16,6 +16,7 @@ const initialState = {
   enteredCharacters: [],
   wrongGuesses: 0,
   remainingCharacters: [""],
+  answer: "",
 };
 
 export const hangmanReducer = (state = initialState, action) => {
@@ -24,6 +25,7 @@ export const hangmanReducer = (state = initialState, action) => {
       const categoryName = action.payload.categoryName;
       const categoryContents = list[categoryName];
       const randomNumber = Math.floor(Math.random() * categoryContents.length);
+      const answer = categoryContents[randomNumber];
       const randomPuzzle = [...categoryContents[randomNumber]];
       return {
         ...state,
@@ -33,6 +35,7 @@ export const hangmanReducer = (state = initialState, action) => {
         remainingCharacters: randomPuzzle.filter((e) => e !== " "),
         enteredCharacters: [],
         wrongGuesses: 0,
+        answer: answer,
       };
 
     case CHAR_ENTERED:

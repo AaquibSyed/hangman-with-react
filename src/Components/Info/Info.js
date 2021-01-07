@@ -7,7 +7,12 @@ import InfoGuessedCharacters from "./InfoGuessedCharacters";
 import InfoRemainingTries from "./InfoRemainingTries";
 import { restartGame } from "../../Assets/data";
 
-function Info({ wrongGuesses, enteredCharacters, remainingCharacters }) {
+function Info({
+  wrongGuesses,
+  enteredCharacters,
+  remainingCharacters,
+  answer,
+}) {
   if (remainingCharacters.length === 0) {
     return (
       <Modal isOpen={true}>
@@ -23,7 +28,12 @@ function Info({ wrongGuesses, enteredCharacters, remainingCharacters }) {
     return (
       <div className="info">
         <InfoRemainingTries tries={5 - wrongGuesses} />
-        <InfoGameOver wrongGuesses={wrongGuesses} />
+        {wrongGuesses === 5 && (
+          <Modal isOpen={true}>
+            <InfoGameOver wrongGuesses={wrongGuesses} answer={answer} />
+          </Modal>
+        )}
+
         <InfoGuessedCharacters enteredChars={enteredCharacters} />
       </div>
     );
@@ -35,6 +45,7 @@ const mapStateToProps = (state) => {
     wrongGuesses: state.wrongGuesses,
     enteredCharacters: state.enteredCharacters,
     remainingCharacters: state.remainingCharacters,
+    answer: state.answer,
   };
 };
 export default connect(mapStateToProps)(Info);
