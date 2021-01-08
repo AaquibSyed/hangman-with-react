@@ -32,6 +32,7 @@
 
 .character_right {
   transition: all 0.2s ease-in-out;
+  -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
   background-color: green;
 }
